@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     filepond-rails (0.1.0)
-      rails (>= 7.0.4)
+      rails (>= 7.0)
 
 GEM
   remote: https://rubygems.org/
