@@ -10,7 +10,7 @@ This gem allows you to quickly integrate [FilePond](https://github.com/pqina/fil
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "filepond-rails"
+gem 'filepond-rails'
 ```
 
 And then execute:
