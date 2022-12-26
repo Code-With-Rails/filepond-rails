@@ -1,1 +1,1 @@
-//= link_directory ../stylesheets/filepond/rails .css
+// = link_directory ../javascripts .js
