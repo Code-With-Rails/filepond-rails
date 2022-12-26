@@ -13,14 +13,9 @@ Add this line to your application's Gemfile:
 gem 'filepond-rails'
 ```
 
-And then execute:
+And then run:
 ```bash
 $ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install filepond-rails
 ```
 
 Add the following to your `application.css`:
