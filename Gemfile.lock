@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    filepond-rails (1.0.0)
+    filepond-rails (0.1.0)
       rails (>= 7.0.4)
 
 GEM
