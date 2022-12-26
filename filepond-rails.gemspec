@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name        = 'filepond-rails'
   spec.version     = Filepond::Rails::VERSION
   spec.authors     = ['Simon Chiu']
-  spec.email       = ['simon@codewithrails.com']
+  spec.email       = ['simon@furvur.com']
   spec.homepage    = 'https://codewithrails.com/filepond-rails'
   spec.summary     = 'FilePond integration for Rails'
   spec.description = 'Add FilePond server endpoints and form helpers for Rails'
