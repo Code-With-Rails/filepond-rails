@@ -72,5 +72,22 @@ The gem's JavaScript provide two available exports:
 1. `FilePond` (which corresponds to the original FilePond library)
 2. `FilePondRails` (which is a convenience helper that integrates and sets up FilePond to work with our `FilePond::Rails::IngressController`
 
+## Development
+
+filepond-rails is configured with Docker to help developer-contributors be able to easily work on this gem locally.
+
+To get started:
+
+1. Fork this repository
+2. git clone it to your local machine and cd into it
+3. docker build -t filepond-rails .
+4. docker run -it -v $(pwd):/filepond-rails filepond-rails /bin/bash
+
+You should now be able to run tests locally like so:
+
+```bash
+bin/rails test
+```
+
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
