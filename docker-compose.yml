@@ -1,0 +1,27 @@
+version: "3.8"
+networks:
+  backend:
+  selenium:
+services:
+  chrome_server:
+    image: seleniarm/standalone-chromium
+    volumes:
+      - /dev/shm:/dev/shm
+    networks:
+      - selenium
+  app:
+    build: .
+    tty: true
+    volumes:
+      - .:/filepond-rails
+    working_dir: /filepond-rails
+    environment:
+      SELENIUM_REMOTE_URL: http://chrome_server:4444/wd/hub
+    command: script/docker-dev-start.sh
+    networks:
+      - backend
+      - selenium
+    ports:
+      - "3000:3000"
+    depends_on:
+      - chrome_server

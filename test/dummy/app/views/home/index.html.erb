@@ -1,0 +1,37 @@
+<h1>filepond-rails development</h1>
+
+<hr>
+
+<p>This is the "dummy" test app for the filepond-rails gem. Manually testing the dummy app here should be done before any new releases.</p>
+
+<p>Steps to test:</p>
+
+<ol>
+  <li>Drag and drop a file and ensure it can be uploaded</li>
+  <li>Drag and drop a URL of an image from a browser bar and ensure it can be uploaded</li>
+  <li>Ensure that cancelling an upload removes the blob from the server</li>
+</ol>
+
+<p>
+  Picture: <br />
+  <% if @some_model.picture.attached? %>
+    <br />
+    <%= image_tag(@some_model.picture.representation(resize_to_limit: [100, 100])) %>
+    <%= button_to 'Delete', root_path, method: :delete %>
+  <% else %>
+    No picture
+  <% end %>
+</p>
+
+<%= form_with model: @some_model, url: root_path, method: :post do |f| %>
+  <%= field_set_tag 'Upload Test Form' do %>
+    <%= f.file_field :picture, class: 'filepond', direct_upload: true %><br /><br />
+    <%= f.button 'Save' %>
+  <% end %>
+<% end %>
+
+<p>
+  Versions:<br />
+  Rails <%= Rails::VERSION::STRING %><br />
+  filepond-rails <%= Filepond::Rails::VERSION %>
+</p>

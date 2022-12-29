@@ -80,10 +80,21 @@ To get started:
 
 1. Fork this repository
 2. git clone it to your local machine and cd into it
-3. docker build -t filepond-rails .
-4. docker run -it -v $(pwd):/filepond-rails filepond-rails /bin/bash
+3. Run `docker compose build`
 
-You should now be able to run tests locally like so:
+To run the gem through the "dummy" app, run:
+
+```bash
+docker compose up
+```
+
+To enter the development environment where you can run `bin/rails g controller` and other commands:
+
+```bash
+docker compose run app bash
+```
+
+You should now be able to run tests locally within this bash container:
 
 ```bash
 bin/rails test

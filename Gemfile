@@ -6,6 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # Specify your gem's dependencies in filepond-rails.gemspec.
 gemspec
 
+gem 'image_processing'
 gem 'importmap-rails'
 gem 'sprockets-rails'
 gem 'sqlite3'
