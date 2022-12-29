@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency 'rails', '>= 7.0', '< 8'
-  spec.add_development_dependency 'rubocop', '~> 1.1', '>= 1.1.4'
-  spec.add_development_dependency 'puma'
+  spec.add_development_dependency 'puma', '~> 6.0'
+  spec.add_development_dependency 'rubocop', '~> 1.1'
+  spec.add_development_dependency 'webmock', '~> 3.18'
 end
