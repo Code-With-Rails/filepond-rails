@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  mount Filepond::Rails::Engine => "/filepond-rails"
+  mount Filepond::Rails::Engine => '/filepond-rails'
 end
