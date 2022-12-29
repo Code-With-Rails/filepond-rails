@@ -28,4 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'puma', '~> 6.0'
   spec.add_development_dependency 'rubocop', '~> 1.1'
   spec.add_development_dependency 'webmock', '~> 3.18'
+  spec.add_development_dependency 'capybara'
+  spec.add_development_dependency 'dropybara'
+  spec.add_development_dependency 'selenium-webdriver'
 end

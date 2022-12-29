@@ -59,7 +59,7 @@ let FilePondRails = {
     FilePondRails.input = input
 
     // Initialize FilePond on our element
-    FilePond.create(input, FilePondRails.default_options)
+    return FilePond.create(input, FilePondRails.default_options)
   }
 }
 
