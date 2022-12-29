@@ -4,7 +4,7 @@ This gem allows you to quickly integrate [FilePond](https://github.com/pqina/fil
 
 ## Requirements
 * Rails 7.0.x and above
-* Use of [importmap-rails](https://github.com/rails/importmap-rails) (optional)
+* Use of [importmap-rails](https://github.com/rails/importmap-rails)
 
 ## Installation
 Add this line to your application's Gemfile:
