@@ -4,4 +4,4 @@ window.FilePond = FilePond
 window.FilePondRails = FilePondRails
 
 const input = document.querySelector('.filepond')
-FilePondRails.create(input)
+window.filePondInstance = FilePondRails.create(input)
