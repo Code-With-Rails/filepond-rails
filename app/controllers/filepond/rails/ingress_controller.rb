@@ -13,20 +13,24 @@ module Filepond
       # The alternative way would be to directly proxy the request to
       # the URL where the file is originally hosted.
       def fetch
-        # We explicitly declare this for clarity of what is in the
-        # raw_post value as sent by FilePond
-        uri = URI.parse(raw_post)
-        url = uri.to_s
-        blob = ActiveStorage::Blob.create_and_upload!(
-          io: URI.open(uri),
-          filename: URI.parse(url).path.parameterize
-        )
-        if blob.persisted?
+        begin
+          # We explicitly declare this for clarity of what is in the
+          # raw_post value as sent by FilePond
+          uri = URI.parse(raw_post)
+          url = uri.to_s
+
+          blob = ActiveStorage::Blob.create_and_upload!(
+            io: URI.open(uri),
+            filename: URI.parse(url).path.parameterize
+          )
+
           redirect_to ::Rails.application.routes.url_helpers.rails_service_blob_path(
             blob.signed_id,
             blob.filename
           )
-        else
+        # Why we casting such a wide net with StandardError (TL;DR: too many errors to catch):
+        # See https://stackoverflow.com/a/46979718/20551849
+        rescue StandardError
           head :unprocessable_entity
         end
       end
@@ -39,8 +43,7 @@ module Filepond
         signed_id = raw_post
 
         blob = ActiveStorage::Blob.find_signed(signed_id)
-        if blob
-          blob.purge
+        if blob && blob.purge
           head :ok
         else
           # If we cannot find the blob, then we'll just return 404
