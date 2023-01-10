@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 (January 10, 2023)
+* Update license information
+* Update README with instructions on running system tests
+
 ## 1.0.0 (December 29, 2022)
 * Add Docker to allow consistent development environment
 * Remove unneeded files which were added during scaffolding

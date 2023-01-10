@@ -101,7 +101,7 @@ docker compose run app bash
 You should now be able to run tests locally within this bash container:
 
 ```bash
-bin/rails test
+bin/rails test && bin/rails app:test:system
 ```
 
 ## License
