@@ -103,5 +103,8 @@ You should now be able to run tests locally within this bash container:
 bin/rails test && bin/rails app:test:system
 ```
 
+## Reference
+* Read [How to create a Ruby on Rails gem from your existing code](https://codewithrails.com/create-rails-gem) for a background on this gem
+
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
