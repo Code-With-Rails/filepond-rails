@@ -1,8 +1,7 @@
 # filepond-rails
 
-![example workflow](https://github.com/Code-With-Rails/filepond-rails/actions/workflows/ci.yml/badge.svg)
-
 [![Gem Version](https://badge.fury.io/rb/filepond-rails.svg)](https://badge.fury.io/rb/filepond-rails)
+![Build Status](https://github.com/Code-With-Rails/filepond-rails/actions/workflows/ci.yml/badge.svg)
 
 This gem allows you to quickly integrate [FilePond](https://github.com/pqina/filepond) with your Ruby on Rails app.
 
