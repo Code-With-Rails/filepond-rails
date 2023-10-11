@@ -54,12 +54,12 @@ let FilePondRails = {
   },
 
   // Convenience method to initialize FilePond based on the way this gem expects things to work
-  create: function(input) {
+  create: function(input, options = {}) {
     FilePondRails.directUploadUrl = input.dataset.directUploadUrl
     FilePondRails.input = input
 
     // Initialize FilePond on our element
-    return FilePond.create(input, FilePondRails.default_options)
+    return FilePond.create(input, {...FilePondRails.default_options, ...options})
   }
 }
 
