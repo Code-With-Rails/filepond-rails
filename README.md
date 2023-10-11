@@ -68,7 +68,11 @@ window.FilePond = FilePond
 window.FilePondRails = FilePondRails
 
 const input = document.querySelector('.filepond')
-FilePondRails.create(input)
+FilePondRails.create(input, {
+      acceptedFileTypes: ['application/pdf'],
+      labelIdle:'Drag & Drop files or <span class="filepond--label-action">Browse</span>',
+      maxFiles: 5,
+    });
 ```
 
 The gem's JavaScript provide two available exports:
